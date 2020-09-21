@@ -1,0 +1,8 @@
+*.gcda
+*.gcno
+liblinked.a
+linkedList_tests
+*.o
+*~
+todo.txt
+.vscode
