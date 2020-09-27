@@ -1,3 +1,4 @@
+main.c
 *.gcda
 *.gcno
 liblinked.a

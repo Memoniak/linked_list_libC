@@ -49,8 +49,11 @@ HANDLEDIR	=	$(SRCDIR)handling/
 FREEDIR		=	$(SRCDIR)freeing/
 
 
-SRC	=	$(CREATEDIR)create_circ_list.c		\
+SRC	=	$(SRCDIR)vmemset.c					\
+											\
+		$(CREATEDIR)create_circ_list.c		\
 		$(CREATEDIR)create_linked_list.c	\
+		$(CREATEDIR)create_double_list.c	\
 											\
 											\
 		$(FREEDIR)free_linked_list.c		\
@@ -86,6 +89,8 @@ $(NAME):	$(OBJ)
 test:	$(NAME)
 		@gcc -g -o $(TEST_NAME) $(TESTFILE) $(TESTFLAGS)
 
+main:	$(NAME)
+		@gcc -g -o linked_main $(SRCDIR)main.c $(TESTFLAGS)
 clean:
 		@rm -f $(OBJ)
 		@($(ECHO) $(BOLD) $(GREEN)✓" CLEAN "$(NAME)$(DEFAULT))
@@ -94,6 +99,7 @@ fclean:
 		@rm -f $(OBJ)
 		@rm -f $(BINDIR)$(NAME)
 		@rm -f $(TEST_NAME)
+		@rm -f linked_main
 		@rm -f *.gcno
 		@rm -f *.gcda
 		@($(ECHO) $(BOLD) $(GREEN)✓" FCLEAN "$(NAME)$(DEFAULT))

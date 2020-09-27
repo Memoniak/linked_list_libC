@@ -16,14 +16,12 @@ node_t *create_linked_list(size_t size)
 
     if (!(head = malloc(sizeof(node_t))))
         malloc_error();
-    head->data = 0;
-    head->next = NULL;
+    lmemset(&head);
     prev_node = head;
-    for (size_t i = 2; i < size; i++) {
+    for (size_t i = 1; i < size; i++) {
         if (!(new_node = malloc(sizeof(node_t))))
             malloc_error();
-        new_node->data = 0;
-        new_node->next = NULL;
+        lmemset(&new_node);
         prev_node->next = new_node;
         prev_node = new_node;
     }

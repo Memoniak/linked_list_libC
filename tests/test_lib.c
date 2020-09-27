@@ -13,7 +13,7 @@ Test(create_linked_list, simple_create)
     size_t size = 5;
     node_t *head = create_linked_list(size);
     node_t *tmp = head;
-    size_t i = 1;
+    size_t i = 0;
 
     while (tmp != NULL) {
         i++;
@@ -23,7 +23,7 @@ Test(create_linked_list, simple_create)
         }
         tmp = tmp->next;
     }
-    free_linked_list(head);
+   // free_linked_list(head);
     cr_assert(i == size);
 }
 
@@ -33,7 +33,17 @@ Test(get_list_size, simple_list_size)
     node_t *head = create_linked_list(size);
 
     int res = get_list_size(head);
-    free_linked_list(head);
+    //free_linked_list(head);
+    cr_assert(res == size);
+}
+
+Test(get_list_size, singe_list_size)
+{
+    size_t size = 1;
+    node_t *head = create_linked_list(size);
+
+    int res = get_list_size(head);
+    //free_linked_list(head);
     cr_assert(res == size);
 }
 
@@ -42,11 +52,25 @@ Test(create_circ_list, simple_circ_create)
     size_t size = 5;
     node_t *head = create_circ_list(size);
     node_t *tmp = head;
-    size_t i = 1;
+    size_t i = 0;
 
     do {
         i++;
         tmp = tmp->next;
     } while(tmp != head);
     cr_assert(i == size);
+}
+
+Test(create_double_list, simple_double_create)
+{
+    size_t size = 5;
+    d_node_t *head = create_double_list(size);
+    d_node_t *temp = head;
+    d_node_t *prev;
+    size_t i = 0;
+
+    do {
+        i++;
+
+    } while (temp != head);
 }

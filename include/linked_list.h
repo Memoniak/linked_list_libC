@@ -27,10 +27,11 @@ typedef struct d_node {
 //ERROR_HANDLING
 void malloc_error();
 
-
 //CREATING
 node_t *create_linked_list(size_t size);
 node_t *create_circ_list(size_t size);
+d_node_t *create_double_list(size_t size);
+
 
 //PRINTING
 void print_linked_list(node_t *head);
@@ -41,3 +42,7 @@ size_t get_list_size(node_t *head);
 
 //FREEING
 void free_linked_list(node_t *head);
+
+//UTIL
+void lmemset(node_t **node);
+void dmemset(d_node_t **node);
