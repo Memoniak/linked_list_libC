@@ -57,6 +57,7 @@ SRC	=	$(SRCDIR)vmemset.c					\
 											\
 											\
 		$(FREEDIR)free_linked_list.c		\
+		$(FREEDIR)free_circular_list.c		\
 											\
 		$(HANDLEDIR)get_list_size.c			\
 		$(ERRORDIR)malloc_error.c			\

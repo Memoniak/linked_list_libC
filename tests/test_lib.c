@@ -23,7 +23,7 @@ Test(create_linked_list, simple_create)
         }
         tmp = tmp->next;
     }
-   // free_linked_list(head);
+    free_linked_list(head);
     cr_assert(i == size);
 }
 
@@ -33,7 +33,7 @@ Test(get_list_size, simple_list_size)
     node_t *head = create_linked_list(size);
 
     int res = get_list_size(head);
-    //free_linked_list(head);
+    free_linked_list(head);
     cr_assert(res == size);
 }
 
@@ -43,7 +43,7 @@ Test(get_list_size, singe_list_size)
     node_t *head = create_linked_list(size);
 
     int res = get_list_size(head);
-    //free_linked_list(head);
+    free_linked_list(head);
     cr_assert(res == size);
 }
 
@@ -58,6 +58,7 @@ Test(create_circ_list, simple_circ_create)
         i++;
         tmp = tmp->next;
     } while(tmp != head);
+    free_circular_list(head);
     cr_assert(i == size);
 }
 
@@ -71,6 +72,7 @@ Test(create_double_list, simple_double_create)
 
     do {
         i++;
-
+	temp = temp->next;
     } while (temp != head);
+    cr_assert(i == size);
 }

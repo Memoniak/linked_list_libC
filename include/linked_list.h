@@ -35,6 +35,7 @@ d_node_t *create_double_list(size_t size);
 
 //PRINTING
 void print_linked_list(node_t *head);
+void print_link();
 void print_circ_list(node_t *head);
 
 //HANDLING
@@ -42,6 +43,7 @@ size_t get_list_size(node_t *head);
 
 //FREEING
 void free_linked_list(node_t *head);
+void free_circular_list(node_t *head);
 
 //UTIL
 void lmemset(node_t **node);

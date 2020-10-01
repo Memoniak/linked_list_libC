@@ -80,7 +80,7 @@ I divided the library into **4** parts. **Creating**, **Handling**, **Printing**
 |:--------:|:-------------:|:--------:|:-------:|
 | create_linked_list | push_linked_list | print_linked_list | free_linked_list
 | create_circular_list | pop_linked_list | print_circular_list | free_circular_list
-| create_double_list | remove_by_index | print_double_list | free_double_list
+| create_double_list | remove_by_index |                       |
 | 		     | remove_by_value |
 |                    | push_double_list|
 |                    | pop_double_list |

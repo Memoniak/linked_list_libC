@@ -7,11 +7,6 @@
 
 #include "linked_list.h"
 
-static void print_link()
-{
-    printf("\t|\n\t|\n\t|\n");
-}
-
 void print_linked_list(node_t *head)
 {
     node_t *tmp = head;
