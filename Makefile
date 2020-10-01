@@ -60,10 +60,12 @@ SRC	=	$(SRCDIR)vmemset.c					\
 		$(FREEDIR)free_circular_list.c		\
 											\
 		$(HANDLEDIR)get_list_size.c			\
+		$(HANDLEDIR)push_linked_list.c			\
 		$(ERRORDIR)malloc_error.c			\
 											\
 		$(PRINTDIR)print_linked_list.c		\
-		$(PRINTDIR)print_circ_list.c
+		$(PRINTDIR)print_circ_list.c		\
+		$(PRINTDIR)print_util.c
 
 OBJ	=	$(SRC:.c=.o)
 

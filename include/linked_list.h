@@ -40,6 +40,10 @@ void print_circ_list(node_t *head);
 
 //HANDLING
 size_t get_list_size(node_t *head);
+size_t get_circ_list_size(node_t *head);
+size_t get_double_list_size(d_node_t *head);
+void push_linked_list(node_t *head, size_t data);
+
 
 //FREEING
 void free_linked_list(node_t *head);

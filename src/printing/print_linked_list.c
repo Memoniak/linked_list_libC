@@ -15,7 +15,7 @@ void print_linked_list(node_t *head)
     printf("head:\n");
     while(tmp != NULL ) {
         printf("   data : %i\n", tmp->data);
-        print_link();
+	print_link();
         printf("node #%i:\n", i++);
         tmp = tmp->next;
     }

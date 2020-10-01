@@ -76,3 +76,17 @@ Test(create_double_list, simple_double_create)
     } while (temp != head);
     cr_assert(i == size);
 }
+
+Test(push_linked_list, simple_push)
+{
+  size_t data = 150;
+  size_t size = 5;
+  node_t *head = create_linked_list(size);
+  node_t *tmp = head;
+  
+  push_linked_list(head, data);
+  print_linked_list(head);
+  while (tmp->next != NULL)
+    tmp = tmp->next;
+  cr_assert(tmp->data == data);
+}
