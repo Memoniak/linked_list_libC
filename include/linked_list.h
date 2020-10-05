@@ -42,8 +42,10 @@ void print_circ_list(node_t *head);
 size_t get_list_size(node_t *head);
 size_t get_circ_list_size(node_t *head);
 size_t get_double_list_size(d_node_t *head);
-void push_linked_list(node_t *head, size_t data);
-
+void push_linked_list(node_t **head, size_t data);
+void pop_linked_list(node_t **head);
+void remove_by_index(node_t **head, int index);
+void remove_by_value(node_t **head, size_t value);
 
 //FREEING
 void free_linked_list(node_t *head);

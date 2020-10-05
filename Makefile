@@ -61,6 +61,10 @@ SRC	=	$(SRCDIR)vmemset.c					\
 											\
 		$(HANDLEDIR)get_list_size.c			\
 		$(HANDLEDIR)push_linked_list.c			\
+		$(HANDLEDIR)pop_linked_list.c			\
+		$(HANDLEDIR)remove_by_index.c			\
+		$(HANDLEDIR)remove_by_value.c			\
+								\
 		$(ERRORDIR)malloc_error.c			\
 											\
 		$(PRINTDIR)print_linked_list.c		\

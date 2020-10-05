@@ -83,10 +83,51 @@ Test(push_linked_list, simple_push)
   size_t size = 5;
   node_t *head = create_linked_list(size);
   node_t *tmp = head;
+
+  push_linked_list(&head, data);
+  cr_assert(head->data == data);
+}
+
+Test(pop_linked_list, simple_pop)
+{
+  int data = 10;
+  int size = 5;
+  node_t *head = create_linked_list(size);
+
+  head->next->data = data;
+  pop_linked_list(&head);
+  cr_assert(head->data == data);
+}
+
+Test(remove_by_index, simple_remove)
+{
+  int size = 5;
+  int data = 10;
+  node_t *head = create_linked_list(size);
   
-  push_linked_list(head, data);
-  print_linked_list(head);
-  while (tmp->next != NULL)
-    tmp = tmp->next;
-  cr_assert(tmp->data == data);
+  head->next->next->data = data;
+  remove_by_index(&head, 2);
+  cr_assert(head->next->next->data != data);
+}
+
+Test(remove_by_index, remove_negative)
+{
+  int size = 5;
+  int data = 20;
+  node_t *head = create_linked_list(size);
+
+  head->next->next->data = data;
+  remove_by_index(&head, -10);
+  cr_assert(head->next->next->data == data);
+}
+
+Test(remove_by_value, simple_remove_by_value)
+{
+  int size = 6;
+  int data = 30;
+  node_t *head = create_linked_list(size);
+
+  head->next->data = data;
+  remove_by_value(&head, data);
+  cr_assert(head->next->data != data);
 }
